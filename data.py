@@ -47,7 +47,7 @@ def calc_data():
     avg_churn_prob = churn_probabilities.mean()
 
     # Identify high-risk customers (e.g., those with a churn probability above a threshold)
-    high_risk_customers = (y_pred > avg_churn_prob).sum()
+    high_risk_customers = (churn_probabilities > avg_churn_prob).sum()
 
     # Create lists to store churn rates and high-risk counts by state
     churn_rate_by_state = []
